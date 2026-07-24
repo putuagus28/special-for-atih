@@ -23,7 +23,8 @@
 </head>
 <body>
   <div class="opening" id="opening"><div class="envelope-wrap"><p class="eyebrow">Sebuah pesan kecil dari hati</p><h1>Untuk Atih Sayang</h1><p>Ada perjalanan enam bulan yang ingin aku ceritakan kembali—pelan-pelan, dengan seluruh rasa syukur dan cinta.</p><div class="envelope" id="envelope"><div class="heart-seal">❤</div></div><button class="open-btn" id="openBtn">Buka Surat Cinta 💌</button></div></div>
-  <button class="music-btn" id="musicBtn">♫ Nyalakan suasana</button>
+  <audio id="bgMusic" loop><source src="melodyloops-preview-touch-of-hope-2m30s.mp3" type="audio/mpeg"></audio>
+<button class="music-btn" id="musicBtn">🎵 Nyalakan Musik</button>
   <main id="mainContent">
     <section class="hero"><div class="hero-card"><div class="mini">⏳ Menuju 25 Juli 2026 ❤️</div><h2>Happy <span>6 Months</span></h2><div class="typing" id="typing"></div><div class="counter"><div><strong id="days">0</strong><small>Hari</small></div><div><strong id="hours">0</strong><small>Jam</small></div><div><strong id="minutes">0</strong><small>Menit</small></div><div><strong id="seconds">0</strong><small>Detik</small></div></div></div></section>
     <section><div class="section-title"><span>Surat untukmu</span><h3>Untuk Atih, rumah ternyamanku</h3></div><article class="letter">
@@ -86,8 +87,20 @@
     setInterval(updateCounter,1000);
     function createPetal(symbol=Math.random()>.45?"❤":"🌸",burst=false){const petal=document.createElement("span");petal.className="petal";petal.textContent=symbol;petal.style.left=(burst?40+Math.random()*20:Math.random()*100)+"vw";petal.style.fontSize=(12+Math.random()*18)+"px";petal.style.opacity=.25+Math.random()*.55;petal.style.setProperty("--drift",(-120+Math.random()*240)+"px");petal.style.animationDuration=(burst?3:6+Math.random()*6)+"s";document.body.appendChild(petal);setTimeout(()=>petal.remove(),13000)}setInterval(()=>createPetal(),700);function burstHearts(){for(let i=0;i<24;i++)setTimeout(()=>createPetal("❤",true),i*60)}
     const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add("show")}),{threshold:.16});document.querySelectorAll(".moment").forEach(el=>observer.observe(el));
-    let audioCtx,musicTimer,musicOn=false;function playSoftChord(){if(!audioCtx)return;const now=audioCtx.currentTime;[261.63,329.63,392].forEach((freq,idx)=>{const osc=audioCtx.createOscillator(),gain=audioCtx.createGain();osc.type="sine";osc.frequency.value=freq/2;gain.gain.setValueAtTime(0,now);gain.gain.linearRampToValueAtTime(.025,now+.8);gain.gain.exponentialRampToValueAtTime(.0001,now+5.5);osc.connect(gain).connect(audioCtx.destination);osc.start(now+idx*.08);osc.stop(now+5.6)})}
-    musicBtn.addEventListener("click",async()=>{if(!audioCtx)audioCtx=new(window.AudioContext||window.webkitAudioContext)();await audioCtx.resume();musicOn=!musicOn;if(musicOn){playSoftChord();musicTimer=setInterval(playSoftChord,6000);musicBtn.textContent="♫ Matikan suasana"}else{clearInterval(musicTimer);musicBtn.textContent="♫ Nyalakan suasana"}});
+    const bgMusic=document.getElementById("bgMusic");
+musicBtn.addEventListener("click",async()=>{
+ if(bgMusic.paused){
+   try{
+     await bgMusic.play();
+     musicBtn.innerHTML="⏸ Matikan Musik";
+   }catch(e){
+     alert("File music.mp3 belum ditemukan. Simpan music.mp3 di folder yang sama dengan HTML.");
+   }
+ }else{
+   bgMusic.pause();
+   musicBtn.innerHTML="🎵 Nyalakan Musik";
+ }
+});
   </script>
 </body>
 </html>
