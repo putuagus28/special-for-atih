@@ -25,7 +25,7 @@
   <div class="opening" id="opening"><div class="envelope-wrap"><p class="eyebrow">Sebuah pesan kecil dari hati</p><h1>Untuk Atih Sayang</h1><p>Ada perjalanan enam bulan yang ingin aku ceritakan kembali—pelan-pelan, dengan seluruh rasa syukur dan cinta.</p><div class="envelope" id="envelope"><div class="heart-seal">❤</div></div><button class="open-btn" id="openBtn">Buka Surat Cinta 💌</button></div></div>
   <button class="music-btn" id="musicBtn">♫ Nyalakan suasana</button>
   <main id="mainContent">
-    <section class="hero"><div class="hero-card"><div class="mini">❤ Enam bulan penuh cerita</div><h2>Happy <span>6 Months</span></h2><div class="typing" id="typing"></div><div class="counter"><div><strong id="days">0</strong><small>Hari</small></div><div><strong id="hours">0</strong><small>Jam</small></div><div><strong id="minutes">0</strong><small>Menit</small></div><div><strong id="seconds">0</strong><small>Detik</small></div></div></div></section>
+    <section class="hero"><div class="hero-card"><div class="mini">⏳ Menuju 25 Juli 2026 ❤️</div><h2>Happy <span>6 Months</span></h2><div class="typing" id="typing"></div><div class="counter"><div><strong id="days">0</strong><small>Hari</small></div><div><strong id="hours">0</strong><small>Jam</small></div><div><strong id="minutes">0</strong><small>Menit</small></div><div><strong id="seconds">0</strong><small>Detik</small></div></div></div></section>
     <section><div class="section-title"><span>Surat untukmu</span><h3>Untuk Atih, rumah ternyamanku</h3></div><article class="letter">
       <p>Atih Sayang, selamat hari anniversary kita yang ke-6 bulan. Mungkin bagi sebagian orang, enam bulan hanyalah angka. Tetapi bagiku, enam bulan ini adalah ribuan detik yang menyimpan tawa, rindu, salah paham, pengertian, dan begitu banyak alasan untuk tetap memilihmu.</p>
       <p>Sejak Januari sampai Juli, kita tidak hanya sedang menghitung waktu. Kita sedang membangun sebuah perjalanan—pelan-pelan, dari dua orang yang saling mengenal menjadi dua hati yang belajar saling menjaga.</p>
@@ -50,12 +50,40 @@
     <footer>Dibuat dengan cinta oleh Putu, khusus untuk Atih ❤️</footer>
   </main>
   <script>
-    const START_DATE=new Date("2026-01-24T00:00:00+08:00");
+    const TARGET_DATE=new Date("2026-07-25T00:00:00+08:00");
     const opening=document.getElementById("opening"),openBtn=document.getElementById("openBtn"),envelope=document.getElementById("envelope"),mainContent=document.getElementById("mainContent"),typingEl=document.getElementById("typing"),musicBtn=document.getElementById("musicBtn");
     const message="Atih Sayang, dari Januari sampai Juli, setiap hari bersamamu membuatku semakin yakin bahwa pertemuan kita adalah salah satu hal terindah dalam hidupku. ❤️";let typingStarted=false;
     function openLetter(){opening.classList.add("hidden");mainContent.classList.add("visible");if(!typingStarted){typingStarted=true;typeMessage()}burstHearts()}openBtn.addEventListener("click",openLetter);envelope.addEventListener("click",openLetter);
     function typeMessage(){let i=0;const cursor=document.createElement("span");cursor.className="cursor";typingEl.appendChild(cursor);const timer=setInterval(()=>{cursor.insertAdjacentText("beforebegin",message.charAt(i));i++;if(i>=message.length){clearInterval(timer);setTimeout(()=>cursor.remove(),1200)}},42)}
-    function updateCounter(){const now=new Date();let diff=Math.max(0,now-START_DATE);const days=Math.floor(diff/86400000);diff%=86400000;const hours=Math.floor(diff/3600000);diff%=3600000;const minutes=Math.floor(diff/60000);const seconds=Math.floor((diff%60000)/1000);daysEl=document.getElementById("days");daysEl.textContent=days;document.getElementById("hours").textContent=String(hours).padStart(2,"0");document.getElementById("minutes").textContent=String(minutes).padStart(2,"0");document.getElementById("seconds").textContent=String(seconds).padStart(2,"0")}updateCounter();setInterval(updateCounter,1000);
+    function updateCounter(){
+      const now=new Date();
+      const diff=TARGET_DATE-now;
+
+      if(diff<=0){
+        document.querySelector(".counter").innerHTML=`
+          <div style="grid-column:1/-1;padding:28px 18px">
+            <strong style="font-size:clamp(1.45rem,4vw,2.5rem)">❤️ Happy 6 Month Anniversary ❤️</strong>
+            <small style="display:block;margin-top:12px;line-height:1.8">
+              25 Januari 2026 — 25 Juli 2026<br>
+              Genap 6 Bulan Bersama, Atih Sayang.
+            </small>
+          </div>
+        `;
+        return;
+      }
+
+      const days=Math.floor(diff/86400000);
+      const hours=Math.floor((diff%86400000)/3600000);
+      const minutes=Math.floor((diff%3600000)/60000);
+      const seconds=Math.floor((diff%60000)/1000);
+
+      document.getElementById("days").textContent=String(days).padStart(2,"0");
+      document.getElementById("hours").textContent=String(hours).padStart(2,"0");
+      document.getElementById("minutes").textContent=String(minutes).padStart(2,"0");
+      document.getElementById("seconds").textContent=String(seconds).padStart(2,"0");
+    }
+    updateCounter();
+    setInterval(updateCounter,1000);
     function createPetal(symbol=Math.random()>.45?"❤":"🌸",burst=false){const petal=document.createElement("span");petal.className="petal";petal.textContent=symbol;petal.style.left=(burst?40+Math.random()*20:Math.random()*100)+"vw";petal.style.fontSize=(12+Math.random()*18)+"px";petal.style.opacity=.25+Math.random()*.55;petal.style.setProperty("--drift",(-120+Math.random()*240)+"px");petal.style.animationDuration=(burst?3:6+Math.random()*6)+"s";document.body.appendChild(petal);setTimeout(()=>petal.remove(),13000)}setInterval(()=>createPetal(),700);function burstHearts(){for(let i=0;i<24;i++)setTimeout(()=>createPetal("❤",true),i*60)}
     const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add("show")}),{threshold:.16});document.querySelectorAll(".moment").forEach(el=>observer.observe(el));
     let audioCtx,musicTimer,musicOn=false;function playSoftChord(){if(!audioCtx)return;const now=audioCtx.currentTime;[261.63,329.63,392].forEach((freq,idx)=>{const osc=audioCtx.createOscillator(),gain=audioCtx.createGain();osc.type="sine";osc.frequency.value=freq/2;gain.gain.setValueAtTime(0,now);gain.gain.linearRampToValueAtTime(.025,now+.8);gain.gain.exponentialRampToValueAtTime(.0001,now+5.5);osc.connect(gain).connect(audioCtx.destination);osc.start(now+idx*.08);osc.stop(now+5.6)})}
