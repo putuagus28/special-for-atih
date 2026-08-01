@@ -1,106 +1,438 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#4b1635">
-  <title>6 Bulan Bersama Atih Sayang ❤️</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Girlfriend Day, Atih ❤️</title>
   <style>
-    :root{--pink:#ff7eb6;--rose:#ff477e;--wine:#4b1635;--cream:#fff7f2;--text:#fff8fb;--glass:rgba(255,255,255,.12);--shadow:0 24px 80px rgba(25,2,18,.35)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);overflow-x:hidden;background:radial-gradient(circle at 15% 20%,rgba(255,126,182,.22),transparent 26%),radial-gradient(circle at 88% 12%,rgba(255,214,165,.16),transparent 24%),linear-gradient(145deg,#180815 0%,#3b102b 42%,#711f4c 100%)}
-    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.28;background-image:radial-gradient(circle,white 0 1px,transparent 1.5px),radial-gradient(circle,white 0 1px,transparent 1.5px);background-position:0 0,38px 52px;background-size:86px 86px;animation:twinkle 5s ease-in-out infinite alternate}@keyframes twinkle{from{opacity:.18;transform:translateY(0)}to{opacity:.38;transform:translateY(-8px)}}
-    .petal{position:fixed;top:-12vh;z-index:3;pointer-events:none;user-select:none;animation:fall linear forwards;filter:drop-shadow(0 6px 8px rgba(0,0,0,.16))}@keyframes fall{to{transform:translate3d(var(--drift),115vh,0) rotate(760deg);opacity:.15}}
-    .opening{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:24px;background:radial-gradient(circle at center,rgba(134,37,90,.86),rgba(17,4,14,.97));transition:opacity .9s ease,visibility .9s ease}.opening.hidden{opacity:0;visibility:hidden}.envelope-wrap{width:min(92vw,520px);text-align:center}.eyebrow{margin:0 0 14px;letter-spacing:.2em;text-transform:uppercase;font-size:.78rem;opacity:.78}.opening h1{margin:0 0 10px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.3rem,8vw,5.4rem);line-height:.95}.opening p{margin:14px auto 28px;max-width:440px;line-height:1.75;color:rgba(255,255,255,.82)}
-    .envelope{position:relative;width:240px;height:150px;margin:20px auto 30px;border-radius:8px;background:linear-gradient(145deg,#ffe2ec,#ffc7da);box-shadow:var(--shadow);cursor:pointer;animation:float 2.5s ease-in-out infinite}@keyframes float{50%{transform:translateY(-9px)}}.envelope:before,.envelope:after{content:"";position:absolute;inset:0}.envelope:before{clip-path:polygon(0 0,50% 58%,100% 0);background:#fff0f6;z-index:3}.envelope:after{clip-path:polygon(0 100%,0 0,50% 58%,100% 0,100% 100%);background:linear-gradient(145deg,#f8aac7,#ff8eb8);z-index:2}.heart-seal{position:absolute;left:50%;top:51%;transform:translate(-50%,-50%);z-index:5;width:50px;height:50px;display:grid;place-items:center;border-radius:50%;background:var(--rose);box-shadow:0 10px 25px rgba(255,71,126,.35);font-size:1.5rem}
-    .open-btn,.music-btn{border:0;border-radius:999px;padding:14px 22px;font-weight:800;cursor:pointer;color:#49142f;background:linear-gradient(135deg,#fff4f8,#ffd6e5);box-shadow:0 12px 30px rgba(255,126,182,.25);transition:.2s}.open-btn:hover,.music-btn:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(255,126,182,.35)}
-    main{width:min(1100px,calc(100% - 32px));margin:0 auto;padding:70px 0 110px;opacity:0;transform:translateY(18px);transition:1s ease}main.visible{opacity:1;transform:none}.hero{min-height:88vh;display:grid;place-items:center;text-align:center}.hero-card{width:min(900px,100%);padding:clamp(30px,7vw,76px);border:1px solid rgba(255,255,255,.18);border-radius:34px;background:linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.06));box-shadow:var(--shadow);backdrop-filter:blur(18px)}.hero .mini{display:inline-flex;gap:8px;align-items:center;padding:9px 15px;border-radius:999px;background:rgba(255,255,255,.1);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}.hero h2{margin:24px 0 12px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(3.2rem,11vw,7.8rem);line-height:.9;font-weight:500}.hero h2 span{display:block;color:#ffd6e5;text-shadow:0 10px 35px rgba(255,126,182,.22)}.typing{min-height:66px;max-width:760px;margin:26px auto 0;line-height:1.8;font-size:clamp(1rem,2.2vw,1.18rem);color:rgba(255,255,255,.82)}.cursor{display:inline-block;width:2px;height:1em;margin-left:3px;vertical-align:-.12em;background:white;animation:blink .8s infinite}@keyframes blink{50%{opacity:0}}
-    .counter{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:36px}.counter div{padding:18px 8px;border-radius:20px;background:rgba(255,255,255,.09)}.counter strong{display:block;font-size:clamp(1.5rem,4vw,2.4rem);color:#ffe7f0}.counter small{opacity:.65;text-transform:uppercase;letter-spacing:.12em;font-size:.66rem}section{margin-top:90px}.section-title{max-width:760px;margin:0 auto 34px;text-align:center}.section-title span{display:block;margin-bottom:8px;color:#ffd1e1;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase}.section-title h3{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.1rem,6vw,4.1rem);font-weight:500}
-    .letter{max-width:850px;margin:0 auto;padding:clamp(28px,6vw,64px);border-radius:30px;color:#4a1b35;background:linear-gradient(rgba(255,255,255,.93),rgba(255,247,242,.96));box-shadow:var(--shadow);position:relative}.letter:before{content:"💌";position:absolute;right:24px;top:18px;font-size:2rem;opacity:.35}.letter p{margin:0 0 20px;line-height:1.95;font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.05rem,2.2vw,1.24rem)}.letter .signature{margin-top:32px;text-align:right;font-weight:700;color:#7b2853}
-    .timeline{position:relative;max-width:900px;margin:0 auto}.timeline:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;transform:translateX(-50%);background:linear-gradient(transparent,rgba(255,255,255,.55),transparent)}.moment{width:calc(50% - 34px);margin-bottom:26px;padding:24px;border:1px solid rgba(255,255,255,.15);border-radius:22px;background:var(--glass);box-shadow:0 16px 40px rgba(0,0,0,.15);backdrop-filter:blur(12px);opacity:0;transform:translateY(25px);transition:.7s ease}.moment.show{opacity:1;transform:none}.moment:nth-child(even){margin-left:calc(50% + 34px)}.month{color:#ffd0e1;font-weight:900;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem}.moment h4{margin:8px 0;font-family:Georgia,"Times New Roman",serif;font-size:1.55rem}.moment p{margin:0;line-height:1.75;color:rgba(255,255,255,.76)}
-    .promise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.promise{min-height:230px;padding:28px;border-radius:26px;background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.16);box-shadow:0 18px 44px rgba(0,0,0,.14)}.promise b{display:block;margin-bottom:14px;font-family:Georgia,"Times New Roman",serif;font-size:1.45rem;color:#ffe0eb}.promise p{margin:0;line-height:1.75;color:rgba(255,255,255,.76)}.final{text-align:center;padding:clamp(45px,8vw,90px) 20px}.big-heart{font-size:4rem;animation:pulse 1.3s ease-in-out infinite}@keyframes pulse{50%{transform:scale(1.15);filter:drop-shadow(0 0 22px rgba(255,126,182,.75))}}.final h3{margin:16px 0 14px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.7rem,8vw,6rem);font-weight:500}.final p{max-width:700px;margin:0 auto;line-height:1.85;color:rgba(255,255,255,.78)}.music-btn{position:fixed;right:18px;bottom:18px;z-index:20;padding:11px 15px;font-size:.83rem}footer{text-align:center;padding:24px;color:rgba(255,255,255,.48);font-size:.82rem}
-    @media(max-width:760px){.counter{grid-template-columns:repeat(2,1fr)}.timeline:before{left:12px}.moment,.moment:nth-child(even){width:calc(100% - 34px);margin-left:34px}.promise-grid{grid-template-columns:1fr}.hero{min-height:92vh}.music-btn{right:12px;bottom:12px}}
+    :root{
+      --pink:#ff4f87;
+      --pink-soft:#ffd9e6;
+      --rose:#ff7aa8;
+      --red:#d93666;
+      --cream:#fff7fa;
+      --dark:#4b2432;
+      --white:rgba(255,255,255,.86);
+    }
+
+    *{box-sizing:border-box}
+
+    html,body{
+      margin:0;
+      min-height:100%;
+      font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      color:var(--dark);
+      overflow-x:hidden;
+    }
+
+    body{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,.9), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(255,179,204,.55), transparent 30%),
+        linear-gradient(135deg,#fff0f5 0%,#ffd7e5 45%,#ffc4d8 100%);
+      position:relative;
+    }
+
+    .glow{
+      position:fixed;
+      width:420px;
+      height:420px;
+      border-radius:50%;
+      filter:blur(80px);
+      opacity:.35;
+      z-index:0;
+      animation:floatGlow 9s ease-in-out infinite alternate;
+    }
+
+    .glow.one{
+      background:#ff8bb1;
+      top:-120px;
+      left:-120px;
+    }
+
+    .glow.two{
+      background:#ffd36f;
+      bottom:-160px;
+      right:-100px;
+      animation-delay:1.5s;
+    }
+
+    @keyframes floatGlow{
+      from{transform:translate(0,0) scale(1)}
+      to{transform:translate(55px,35px) scale(1.15)}
+    }
+
+    .card{
+      width:min(920px,100%);
+      background:var(--white);
+      border:1px solid rgba(255,255,255,.75);
+      border-radius:32px;
+      box-shadow:0 26px 80px rgba(128,34,68,.18);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+      overflow:hidden;
+      position:relative;
+      z-index:2;
+    }
+
+    .top{
+      padding:56px 28px 34px;
+      text-align:center;
+      position:relative;
+      background:
+        linear-gradient(180deg,rgba(255,255,255,.2),rgba(255,255,255,.02)),
+        linear-gradient(135deg,#ff6c9e,#ff9fbc);
+      color:white;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:9px 16px;
+      border-radius:999px;
+      background:rgba(255,255,255,.2);
+      border:1px solid rgba(255,255,255,.35);
+      font-size:14px;
+      letter-spacing:.4px;
+      margin-bottom:20px;
+    }
+
+    h1{
+      margin:0;
+      font-size:clamp(34px,7vw,72px);
+      line-height:1;
+      font-weight:800;
+      text-shadow:0 8px 28px rgba(129,23,58,.18);
+    }
+
+    .name{
+      display:block;
+      margin-top:10px;
+      font-size:clamp(44px,9vw,92px);
+      font-family:Georgia,"Times New Roman",serif;
+      font-style:italic;
+      color:#fff8fb;
+      animation:pulseName 2.4s ease-in-out infinite;
+    }
+
+    @keyframes pulseName{
+      0%,100%{transform:scale(1)}
+      50%{transform:scale(1.035)}
+    }
+
+    .subtitle{
+      max-width:680px;
+      margin:22px auto 0;
+      font-size:clamp(16px,2.3vw,21px);
+      line-height:1.7;
+      color:#fff7fb;
+    }
+
+    .content{
+      padding:34px 28px 40px;
+      text-align:center;
+    }
+
+    .typewriter{
+      min-height:72px;
+      max-width:720px;
+      margin:0 auto 22px;
+      font-size:clamp(18px,2.5vw,24px);
+      line-height:1.65;
+      font-weight:600;
+    }
+
+    .cursor{
+      display:inline-block;
+      width:2px;
+      height:1.1em;
+      background:var(--pink);
+      margin-left:4px;
+      vertical-align:-2px;
+      animation:blink .8s infinite;
+    }
+
+    @keyframes blink{
+      50%{opacity:0}
+    }
+
+    .message{
+      max-width:720px;
+      margin:0 auto;
+      padding:0;
+      max-height:0;
+      opacity:0;
+      overflow:hidden;
+      transform:translateY(14px);
+      transition:max-height .9s ease,opacity .7s ease,transform .7s ease,padding .7s ease;
+    }
+
+    .message.show{
+      max-height:900px;
+      opacity:1;
+      transform:translateY(0);
+      padding:24px 0 0;
+    }
+
+    .letter{
+      background:linear-gradient(180deg,#fff,#fff7fa);
+      border:1px solid #ffd3e1;
+      border-radius:24px;
+      padding:28px;
+      text-align:left;
+      line-height:1.85;
+      font-size:17px;
+      box-shadow:0 16px 38px rgba(217,54,102,.1);
+      position:relative;
+    }
+
+    .letter::before{
+      content:"❤";
+      position:absolute;
+      right:22px;
+      top:16px;
+      font-size:28px;
+      color:#ff8fb2;
+      opacity:.5;
+    }
+
+    .letter p{margin:0 0 16px}
+    .letter p:last-child{margin-bottom:0}
+
+    .signature{
+      margin-top:20px;
+      font-family:Georgia,"Times New Roman",serif;
+      font-style:italic;
+      font-size:23px;
+      color:var(--red);
+      text-align:right;
+    }
+
+    .actions{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:26px;
+    }
+
+    button{
+      border:0;
+      cursor:pointer;
+      border-radius:999px;
+      padding:14px 24px;
+      font-size:16px;
+      font-weight:700;
+      transition:.25s ease;
+    }
+
+    .primary{
+      color:white;
+      background:linear-gradient(135deg,#ff4f87,#ff7ca8);
+      box-shadow:0 12px 28px rgba(255,79,135,.34);
+    }
+
+    .primary:hover{
+      transform:translateY(-2px) scale(1.02);
+      box-shadow:0 16px 34px rgba(255,79,135,.42);
+    }
+
+    .secondary{
+      color:var(--red);
+      background:#fff0f5;
+      border:1px solid #ffc6d9;
+    }
+
+    .secondary:hover{
+      transform:translateY(-2px);
+      background:#ffe5ee;
+    }
+
+    .footer{
+      margin-top:28px;
+      font-size:14px;
+      color:#8b5b6a;
+    }
+
+    .heart{
+      position:fixed;
+      top:-12vh;
+      z-index:1;
+      pointer-events:none;
+      color:#ff5b91;
+      animation:fall linear forwards;
+      filter:drop-shadow(0 4px 6px rgba(160,36,75,.15));
+    }
+
+    @keyframes fall{
+      0%{
+        transform:translate3d(0,-10vh,0) rotate(0deg);
+        opacity:0;
+      }
+      10%{opacity:.95}
+      100%{
+        transform:translate3d(var(--drift),115vh,0) rotate(540deg);
+        opacity:0;
+      }
+    }
+
+    .sparkle{
+      position:absolute;
+      width:7px;
+      height:7px;
+      border-radius:50%;
+      background:white;
+      opacity:.8;
+      animation:sparkle 2.8s ease-in-out infinite;
+    }
+
+    @keyframes sparkle{
+      0%,100%{transform:scale(.3);opacity:.25}
+      50%{transform:scale(1.4);opacity:1}
+    }
+
+    .sparkle.s1{top:18%;left:13%}
+    .sparkle.s2{top:30%;right:15%;animation-delay:.8s}
+    .sparkle.s3{bottom:20%;left:24%;animation-delay:1.4s}
+    .sparkle.s4{bottom:28%;right:24%;animation-delay:2s}
+
+    @media (max-width:600px){
+      body{padding:12px}
+      .card{border-radius:24px}
+      .top{padding:44px 18px 28px}
+      .content{padding:28px 18px 32px}
+      .letter{padding:22px 19px;font-size:16px}
+      button{width:100%}
+    }
   </style>
 </head>
 <body>
-  <div class="opening" id="opening"><div class="envelope-wrap"><p class="eyebrow">Sebuah pesan kecil dari hati</p><h1>Untuk Atih Sayang</h1><p>Ada perjalanan enam bulan yang ingin aku ceritakan kembali—pelan-pelan, dengan seluruh rasa syukur dan cinta.</p><div class="envelope" id="envelope"><div class="heart-seal">❤</div></div><button class="open-btn" id="openBtn">Buka Surat Cinta 💌</button></div></div>
-  <audio id="bgMusic" loop><source src="./melodyloops-preview-touch-of-hope-2m30s.mp3" type="audio/mpeg"></audio>
-<button class="music-btn" id="musicBtn">🎵 Nyalakan Musik</button>
-  <main id="mainContent">
-    <section class="hero"><div class="hero-card"><div class="mini">⏳ Menuju 25 Juli 2026 ❤️</div><h2>Happy <span>6 Months</span></h2><div class="typing" id="typing"></div><div class="counter"><div><strong id="days">0</strong><small>Hari</small></div><div><strong id="hours">0</strong><small>Jam</small></div><div><strong id="minutes">0</strong><small>Menit</small></div><div><strong id="seconds">0</strong><small>Detik</small></div></div></div></section>
-    <section><div class="section-title"><span>Surat untukmu</span><h3>Untuk Atih, rumah ternyamanku</h3></div><article class="letter">
-      <p>Atih Sayang, selamat hari anniversary kita yang ke-6 bulan. Mungkin bagi sebagian orang, enam bulan hanyalah angka. Tetapi bagiku, enam bulan ini adalah ribuan detik yang menyimpan tawa, rindu, salah paham, pengertian, dan begitu banyak alasan untuk tetap memilihmu.</p>
-      <p>Sejak Januari sampai Juli, kita tidak hanya sedang menghitung waktu. Kita sedang membangun sebuah perjalanan—pelan-pelan, dari dua orang yang saling mengenal menjadi dua hati yang belajar saling menjaga.</p>
-      <p>Terima kasih karena sudah hadir, bukan hanya ketika semuanya mudah, tetapi juga ketika hari terasa berat. Terima kasih karena tetap sabar dengan kekuranganku, tetap mendengarkan ceritaku, dan tetap menjadi seseorang yang ingin selalu aku temui setelah hari yang panjang.</p>
-      <p>Aku sadar cinta bukan tentang hubungan yang selalu sempurna. Cinta adalah tentang dua orang yang sama-sama belajar, sama-sama memperbaiki diri, dan tetap memilih untuk menggenggam tangan yang sama setelah melewati banyak keadaan.</p>
-      <p>Aku tidak bisa menjanjikan bahwa perjalanan kita akan selalu mulus. Tetapi aku ingin terus berusaha menjadi seseorang yang membuatmu merasa dihargai, didengar, dijaga, dan dicintai.</p>
-      <p>Semoga enam bulan ini bukan sekadar kenangan indah, melainkan awal dari perjalanan yang jauh lebih panjang. Masih banyak tempat yang ingin aku datangi bersamamu, banyak mimpi yang ingin kita wujudkan, dan banyak hari biasa yang ingin aku jalani dengan cara luar biasa—karena ada kamu di dalamnya.</p>
-      <p>Atih, aku memilihmu hari ini. Aku ingin memilihmu lagi besok, lusa, dan di hari-hari setelahnya. Terima kasih sudah menjadi alasan sederhana mengapa dunia terasa lebih hangat.</p>
-      <p class="signature">Dengan seluruh sayang,<br>Putu ❤️</p>
-    </article></section>
-    <section><div class="section-title"><span>Januari — Juli</span><h3>Enam bulan perjalanan kita</h3></div><div class="timeline">
-      <article class="moment"><div class="month">Januari</div><h4>Awal dari sebuah “kita”</h4><p>Dua orang yang sebelumnya berjalan sendiri, perlahan menemukan alasan untuk berjalan berdampingan. Dari sinilah cerita kecil kita dimulai.</p></article>
-      <article class="moment"><div class="month">Februari</div><h4>Belajar mengenal lebih dalam</h4><p>Kita mulai memahami kebiasaan, cara berpikir, kelebihan, dan kekurangan masing-masing. Tidak selalu mudah, tetapi selalu berarti.</p></article>
-      <article class="moment"><div class="month">Maret</div><h4>Rindu mulai punya nama</h4><p>Percakapan sederhana menjadi sesuatu yang ditunggu. Tawamu menjadi suara yang menenangkan, dan kehadiranmu mulai terasa seperti rumah.</p></article>
-      <article class="moment"><div class="month">April</div><h4>Tetap tinggal saat tak sempurna</h4><p>Kita belajar bahwa hubungan bukan hanya tentang momen indah. Ada perbedaan dan salah paham, tetapi ada pula kemauan untuk memperbaiki.</p></article>
-      <article class="moment"><div class="month">Mei</div><h4>Menyimpan mimpi yang sama</h4><p>Perlahan, masa depan bukan lagi tentang “aku” dan “kamu”, melainkan tentang hal-hal sederhana yang ingin kita bangun bersama.</p></article>
-      <article class="moment"><div class="month">Juni</div><h4>Semakin yakin untuk berjuang</h4><p>Semakin banyak kenangan tercipta. Aku semakin sadar bahwa kebahagiaan sering kali sesederhana melihatmu tersenyum.</p></article>
-      <article class="moment"><div class="month">Juli</div><h4>Enam bulan, dan masih ingin lebih lama</h4><p>Kita tiba di sini dengan semua cerita yang telah dilewati. Semoga bulan-bulan dan tahun-tahun berikutnya masih selalu ada kita.</p></article>
-    </div></section>
-    <section><div class="section-title"><span>Janji sederhana</span><h3>Yang ingin terus aku usahakan</h3></div><div class="promise-grid"><article class="promise"><b>Aku akan mendengarkan</b><p>Bukan hanya mendengar kata-katamu, tetapi berusaha memahami perasaan yang mungkin sulit kamu ungkapkan.</p></article><article class="promise"><b>Aku akan tetap belajar</b><p>Belajar menjadi pasangan yang lebih baik, belajar meminta maaf, dan belajar mencintaimu dengan cara yang kamu butuhkan.</p></article><article class="promise"><b>Aku akan tetap memilihmu</b><p>Bukan karena semuanya selalu mudah, tetapi karena bagiku kamu layak diperjuangkan, hari demi hari.</p></article></div></section>
-    <section class="final"><div class="big-heart">❤️</div><h3>Selamat 6 Bulan, Atih Sayang</h3><p>Terima kasih sudah menjadi bagian paling hangat dari perjalanan Januari sampai Juli ini. Semoga cerita kita terus tumbuh—lebih dewasa, lebih kuat, dan tetap penuh cinta.</p></section>
-    <footer>Dibuat dengan cinta oleh Putu, khusus untuk Atih ❤️</footer>
+  <div class="glow one"></div>
+  <div class="glow two"></div>
+
+  <main class="card">
+    <section class="top">
+      <span class="sparkle s1"></span>
+      <span class="sparkle s2"></span>
+      <span class="sparkle s3"></span>
+      <span class="sparkle s4"></span>
+
+      <div class="badge">🌷 1 Agustus • Girlfriend Day</div>
+      <h1>
+        Happy Girlfriend Day
+        <span class="name">Atih</span>
+      </h1>
+
+      <p class="subtitle">
+        Untuk perempuan tersayang yang selalu punya tempat paling istimewa di hati aku.
+      </p>
+    </section>
+
+    <section class="content">
+      <div class="typewriter">
+        <span id="typing"></span><span class="cursor"></span>
+      </div>
+
+      <div class="actions">
+        <button class="primary" id="openLetter">Buka Pesan untuk Atih 💌</button>
+        <button class="secondary" id="moreHearts">Kirim Lebih Banyak Hati ❤️</button>
+      </div>
+
+      <div class="message" id="message">
+        <div class="letter">
+          <p>Atih sayang,</p>
+
+          <p>
+            Selamat Hari Girlfriend Day untuk kamu, perempuan yang sangat aku sayangi.
+            Terima kasih karena sudah hadir, menemani, dan membuat hari-hari aku terasa lebih berarti.
+          </p>
+
+          <p>
+            Aku juga mau minta maaf karena kemarin aku membuat kamu menangis.
+            Aku benar-benar menyesal sudah membuat hati kamu sedih. Aku sadar mungkin ada ucapan
+            atau sikap aku yang menyakitkan, meskipun aku tidak pernah berniat membuat kamu terluka.
+          </p>
+
+          <p>
+            Maafkan aku ya, Atih. Aku ingin belajar menjadi pasangan yang lebih baik,
+            lebih peka, lebih sabar, dan lebih menjaga perasaan kamu. Senyum kamu jauh lebih berharga
+            daripada ego aku.
+          </p>
+
+          <p>
+            Semoga setelah ini kita bisa terus saling memahami, saling menguatkan,
+            dan menjalani banyak cerita indah bersama. Aku sayang kamu, hari ini,
+            besok, dan seterusnya. ❤️
+          </p>
+
+          <div class="signature">Dengan sayang, pacarmu 💕</div>
+        </div>
+      </div>
+
+      <div class="footer">
+        Dibuat khusus untuk Atih • Happy Girlfriend Day ❤️
+      </div>
+    </section>
   </main>
+
   <script>
-    const TARGET_DATE=new Date("2026-07-25T00:00:00+08:00");
-    const opening=document.getElementById("opening"),openBtn=document.getElementById("openBtn"),envelope=document.getElementById("envelope"),mainContent=document.getElementById("mainContent"),typingEl=document.getElementById("typing"),musicBtn=document.getElementById("musicBtn");
-    const message="Atih Sayang, dari Januari sampai Juli, setiap hari bersamamu membuatku semakin yakin bahwa pertemuan kita adalah salah satu hal terindah dalam hidupku. ❤️";let typingStarted=false;
-    function openLetter(){opening.classList.add("hidden");mainContent.classList.add("visible");if(!typingStarted){typingStarted=true;typeMessage()}burstHearts()}openBtn.addEventListener("click",openLetter);envelope.addEventListener("click",openLetter);
-    function typeMessage(){let i=0;const cursor=document.createElement("span");cursor.className="cursor";typingEl.appendChild(cursor);const timer=setInterval(()=>{cursor.insertAdjacentText("beforebegin",message.charAt(i));i++;if(i>=message.length){clearInterval(timer);setTimeout(()=>cursor.remove(),1200)}},42)}
-    function updateCounter(){
-      const now=new Date();
-      const diff=TARGET_DATE-now;
+    const text = "Atih, hari ini aku ingin mengingatkan kalau kamu sangat berarti untuk aku…";
+    const typingEl = document.getElementById("typing");
+    let index = 0;
 
-      if(diff<=0){
-        document.querySelector(".counter").innerHTML=`
-          <div style="grid-column:1/-1;padding:28px 18px">
-            <strong style="font-size:clamp(1.45rem,4vw,2.5rem)">❤️ Happy 6 Month Anniversary ❤️</strong>
-            <small style="display:block;margin-top:12px;line-height:1.8">
-              25 Januari 2026 — 25 Juli 2026<br>
-              Genap 6 Bulan Bersama, Atih Sayang.
-            </small>
-          </div>
-        `;
-        return;
+    function typeText(){
+      if(index < text.length){
+        typingEl.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeText, 55);
       }
-
-      const days=Math.floor(diff/86400000);
-      const hours=Math.floor((diff%86400000)/3600000);
-      const minutes=Math.floor((diff%3600000)/60000);
-      const seconds=Math.floor((diff%60000)/1000);
-
-      document.getElementById("days").textContent=String(days).padStart(2,"0");
-      document.getElementById("hours").textContent=String(hours).padStart(2,"0");
-      document.getElementById("minutes").textContent=String(minutes).padStart(2,"0");
-      document.getElementById("seconds").textContent=String(seconds).padStart(2,"0");
     }
-    updateCounter();
-    setInterval(updateCounter,1000);
-    function createPetal(symbol=Math.random()>.45?"❤":"🌸",burst=false){const petal=document.createElement("span");petal.className="petal";petal.textContent=symbol;petal.style.left=(burst?40+Math.random()*20:Math.random()*100)+"vw";petal.style.fontSize=(12+Math.random()*18)+"px";petal.style.opacity=.25+Math.random()*.55;petal.style.setProperty("--drift",(-120+Math.random()*240)+"px");petal.style.animationDuration=(burst?3:6+Math.random()*6)+"s";document.body.appendChild(petal);setTimeout(()=>petal.remove(),13000)}setInterval(()=>createPetal(),700);function burstHearts(){for(let i=0;i<24;i++)setTimeout(()=>createPetal("❤",true),i*60)}
-    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add("show")}),{threshold:.16});document.querySelectorAll(".moment").forEach(el=>observer.observe(el));
-    const bgMusic=document.getElementById("bgMusic");
-musicBtn.addEventListener("click",async()=>{
- if(bgMusic.paused){
-   try{
-     await bgMusic.play();
-     musicBtn.innerHTML="⏸ Matikan Musik";
-   }catch(e){
-     alert("File music.mp3 belum ditemukan. Simpan music.mp3 di folder yang sama dengan HTML.");
-   }
- }else{
-   bgMusic.pause();
-   musicBtn.innerHTML="🎵 Nyalakan Musik";
- }
-});
+
+    function createHeart(amount = 1){
+      const icons = ["❤","💕","💗","💖","🌸"];
+      for(let i = 0; i < amount; i++){
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.textContent = icons[Math.floor(Math.random() * icons.length)];
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (16 + Math.random() * 24) + "px";
+        heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+        heart.style.setProperty("--drift", (Math.random() * 180 - 90) + "px");
+        heart.style.opacity = .5 + Math.random() * .5;
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 10500);
+      }
+    }
+
+    setInterval(() => createHeart(1), 700);
+
+    document.getElementById("openLetter").addEventListener("click", function(){
+      const box = document.getElementById("message");
+      box.classList.toggle("show");
+      this.textContent = box.classList.contains("show")
+        ? "Tutup Pesan 💗"
+        : "Buka Pesan untuk Atih 💌";
+
+      if(box.classList.contains("show")){
+        createHeart(24);
+        setTimeout(() => box.scrollIntoView({behavior:"smooth", block:"center"}), 250);
+      }
+    });
+
+    document.getElementById("moreHearts").addEventListener("click", function(){
+      createHeart(40);
+    });
+
+    window.addEventListener("load", () => {
+      typeText();
+      createHeart(16);
+    });
   </script>
 </body>
 </html>
