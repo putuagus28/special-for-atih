@@ -510,7 +510,7 @@
                         <div class="actions">
                             <button
                                 class="btn"
-                                onclick="document.getElementById('letterSection').scrollIntoView({behavior:'smooth'})"
+                                id="openLetterBtn"
                             >
                                 Ada Surat Buat Kamu 💌</button
                             ><button class="btn outline" id="heroHearts">Kirim Peluk ♡</button>
@@ -649,6 +649,18 @@
             };
             const music = document.getElementById("bgMusic"),
                 musicBtn = document.getElementById("musicBtn");
+            document.getElementById("openLetterBtn").addEventListener("click", () => {
+                // Putar musik melalui interaksi langsung pengguna.
+                if (music.paused) {
+                    music.play().then(() => {
+                        musicBtn.textContent = "♫ Jeda Musik";
+                        musicBtn.setAttribute("aria-pressed", "true");
+                    }).catch(() => {
+                        musicBtn.textContent = "♫ Putar Musik";
+                    });
+                }
+                document.getElementById("letterSection").scrollIntoView({ behavior: "smooth" });
+            });
             musicBtn.onclick = async () => {
                 if (music.paused) {
                     try {
