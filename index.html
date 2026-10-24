@@ -15,9 +15,7 @@
       --white:rgba(255,255,255,.86);
     }
 
-    *{
-      box-sizing:border-box;
-    }
+    *{box-sizing:border-box}
 
     html,body{
       margin:0;
@@ -273,9 +271,15 @@
     }
 
     @keyframes fall{
-      0%{transform:translate3d(0,-10vh,0) rotate(0deg);opacity:0;}
+      0%{
+        transform:translate3d(0,-10vh,0) rotate(0deg);
+        opacity:0;
+      }
       10%{opacity:.95}
-      100%{transform:translate3d(var(--drift),115vh,0) rotate(540deg);opacity:0;}
+      100%{
+        transform:translate3d(var(--drift),115vh,0) rotate(540deg);
+        opacity:0;
+      }
     }
 
     .sparkle{
@@ -309,50 +313,69 @@
   </style>
 </head>
 <body>
-  <!-- Ambient glow spheres in background -->
+  <!-- ELEMEN AUDIO UNTUK LAGU -->
+  <!-- PASTIKAN NAMA FILE SESUAI DENGAN YANG ADA DI REPOSITORI GITHUB KAMU, TERMASUK EKSTENSINYA (contoh: .mp3) -->
+  <audio id="bgMusic" src="music.mp3" loop preload="auto"></audio>
+
   <div class="glow one"></div>
   <div class="glow two"></div>
 
   <main class="card">
     <section class="top">
-      <!-- Sparkle visual elements -->
       <span class="sparkle s1"></span>
       <span class="sparkle s2"></span>
       <span class="sparkle s3"></span>
       <span class="sparkle s4"></span>
-      
-      <!-- Event date badge -->
-      <div class="badge">💖 25 Oktober 2026 • Happy 9th Month Anniversary</div>
-      
+
+      <div class="badge">🌷 25 Oktober 2026 • 9 Months Anniversary</div>
       <h1>
-        Happy 9th Month Anniversary<br>
+        Happy Anniversary
         <span class="name">Atih</span>
       </h1>
-      
-      <p class="subtitle">Untuk perempuan tersayang yang selalu punya tempat paling istimewa di hati aku.</p>
+
+      <p class="subtitle">
+        Untuk perempuan tersayang yang selalu punya tempat paling istimewa di hati aku.
+      </p>
     </section>
 
     <section class="content">
-      <!-- Typewriter effect container -->
       <div class="typewriter">
         <span id="typing"></span><span class="cursor"></span>
       </div>
 
-      <!-- Action buttons -->
       <div class="actions">
         <button class="primary" id="openLetter">Buka Pesan untuk Atih 💌</button>
         <button class="secondary" id="moreHearts">Kirim Lebih Banyak Hati ❤️</button>
       </div>
 
-      <!-- Hidden letter section -->
       <div class="message" id="message">
         <div class="letter">
           <p>Atih sayang,</p>
-          <p>Selamat hari jadi yang ke-9 bulan, sayangku. Rasanya waktu berlalu begitu cepat, dan sekarang kamu sudah jadi bagian terpenting dalam hari-hariku.</p>
-          <p>Terima kasih ya sudah bertahan, menemani, dan selalu memberikan senyum termanis kamu buat aku selama 9 bulan ini. Setiap momen bareng kamu adalah hal yang selalu aku syukuri.</p>
-          <p>Maaf kalau selama ini aku masih punya banyak kurangnya, mungkin kadang bikin kamu kesal atau sedih. Tapi percayalah, aku akan selalu berusaha jadi pasangan yang lebih baik dan lebih peka buat kamu.</p>
-          <p>Semoga setelah ini kita bisa terus saling memahami, menguatkan, dan melukis lebih banyak cerita indah bersama. Jangan ngambek-ngambekan lagi yah. Aku sayang banget sama kamu, hari ini, besok, dan selamanya. ❤️</p>
-          <div class="signature">Dengan penuh cinta, pacarmu 💕</div>
+
+          <p>
+            Selamat <i>Anniversary</i> ke-9 bulan untuk kamu, perempuan yang sangat aku sayangi.
+            Terima kasih karena sudah hadir, menemani, dan membuat hari-hari aku terasa lebih berarti.
+          </p>
+
+          <p>
+            Aku juga mau minta maaf karena kemarin aku membuat kamu menangis.
+            Aku benar-benar menyesal sudah membuat hati kamu sedih. Aku sadar mungkin ada ucapan
+            atau sikap aku yang menyakitkan, meskipun aku tidak pernah berniat membuat kamu terluka.
+          </p>
+
+          <p>
+            Maafkan aku ya, Atih. <b>Jangan ngambek-ngambekan lagi yah.</b> Aku ingin belajar menjadi pasangan yang lebih baik,
+            lebih peka, lebih sabar, dan lebih menjaga perasaan kamu. Senyum kamu jauh lebih berharga
+            daripada ego aku.
+          </p>
+
+          <p>
+            Semoga setelah ini kita bisa terus saling memahami, saling menguatkan,
+            dan menjalani banyak cerita indah bersama. Aku sayang kamu, hari ini,
+            besok, dan seterusnya. ❤️
+          </p>
+
+          <div class="signature">Dengan sayang, pacarmu 💕</div>
         </div>
       </div>
 
@@ -363,12 +386,10 @@
   </main>
 
   <script>
-    // Text for the typewriter effect
-    const text = "Atih sayang, hari ini tepat 9 bulan kita bersama, dan setiap detiknya sangat berharga buat aku...";
+    const text = "Atih, di hari anniversary ke-9 bulan kita ini, aku ingin mengingatkan kalau kamu sangat berarti untuk aku…";
     const typingEl = document.getElementById("typing");
     let index = 0;
 
-    // Typewriter logic
     function typeText(){
       if(index < text.length){
         typingEl.textContent += text.charAt(index);
@@ -377,7 +398,6 @@
       }
     }
 
-    // Floating heart creation logic
     function createHeart(amount = 1){
       const icons = ["❤","💕","💗","💖","🌸"];
       for(let i = 0; i < amount; i++){
@@ -390,36 +410,39 @@
         heart.style.setProperty("--drift", (Math.random() * 180 - 90) + "px");
         heart.style.opacity = .5 + Math.random() * .5;
         document.body.appendChild(heart);
-        
-        // Remove heart element after animation ends
         setTimeout(() => heart.remove(), 10500);
       }
     }
 
-    // Continuously spawn hearts
     setInterval(() => createHeart(1), 700);
 
-    // Toggle letter open/close
+    const bgMusic = document.getElementById("bgMusic");
+    
     document.getElementById("openLetter").addEventListener("click", function(){
       const box = document.getElementById("message");
       box.classList.toggle("show");
       
-      this.textContent = box.classList.contains("show") 
+      const isShowing = box.classList.contains("show");
+      
+      this.textContent = isShowing 
         ? "Tutup Pesan 💗" 
         : "Buka Pesan untuk Atih 💌";
-        
-      if(box.classList.contains("show")){
+
+      if(isShowing){
         createHeart(24);
+        // Putar musik saat pesan dibuka
+        bgMusic.play().catch(error => console.log("Autoplay dicegah oleh browser."));
         setTimeout(() => box.scrollIntoView({behavior:"smooth", block:"center"}), 250);
+      } else {
+        // Hentikan musik (jika mau lagu berhenti saat ditutup)
+        bgMusic.pause();
       }
     });
 
-    // Spawn more hearts on click
     document.getElementById("moreHearts").addEventListener("click", function(){
       createHeart(40);
     });
 
-    // Start everything when the page loads
     window.addEventListener("load", () => {
       typeText();
       createHeart(16);
